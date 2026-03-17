@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德语学习与AI批改平台</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 设置聊天框的高度 */
+        .chat-container-height {
+            min-height: 550px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800 font-sans">
+
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-sm mb-8 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-blue-900 flex items-center">
+                <span class="mr-2">🇩🇪</span> 德语学习与AI批改平台
+            </h1>
+        </div>
+    </header>
+
+    <!-- 主体内容区：横版上下排列 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 space-y-8">
+
+        <!-- 第一部分：德语课程 (横版宽屏) -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 md:p-8">
+            <div class="flex items-center mb-2">
+                <span class="text-2xl mr-2">📚</span>
+                <h2 class="text-2xl font-semibold text-slate-800">德语课程</h2>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">系统化的德语学习路径，从入门到精通。</p>
+            
+            <!-- 内部使用 4 列网格平铺 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 bg-blue-50 rounded-xl hover:bg-blue-100 hover:shadow-md transition cursor-pointer border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">A1 零基础入门班</h3>
+                    <p class="text-sm text-blue-700">发音规则、基础问候、日常简单交流，带你轻松迈出第一步。</p>
+                </div>
+                <div class="p-5 bg-blue-50 rounded-xl hover:bg-blue-100 hover:shadow-md transition cursor-pointer border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">A2 基础进阶班</h3>
+                    <p class="text-sm text-blue-700">时态运用、从句基础、生活场景对话，建立完整的语法框架。</p>
+                </div>
+                <div class="p-5 bg-blue-50 rounded-xl hover:bg-blue-100 hover:shadow-md transition cursor-pointer border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">B1 中级核心班</h3>
+                    <p class="text-sm text-blue-700">复杂语法、长篇阅读、独立表达观点，突破德语学习瓶颈。</p>
+                </div>
+                <div class="p-5 bg-blue-50 rounded-xl hover:bg-blue-100 hover:shadow-md transition cursor-pointer border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">德福/DSH 冲刺班</h3>
+                    <p class="text-sm text-blue-700">考试技巧、真题演练、听说读写全面提升，助力拿下留学语言关。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：德语资源 (横版宽屏) -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 md:p-8">
+            <div class="flex items-center mb-2">
+                <span class="text-2xl mr-2">🎧</span>
+                <h2 class="text-2xl font-semibold text-slate-800">德语资源</h2>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">精选学习资料，助力日常积累与练习。</p>
+            
+            <!-- 内部使用 3 列网格平铺 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-green-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">📖 词汇与语法</h3>
+                    <ul class="text-sm text-slate-600 space-y-3">
+                        <li><a href="#" class="hover:text-green-600 hover:underline flex items-center">➔ A1-B1 核心词汇表 (PDF)</a></li>
+                        <li><a href="#" class="hover:text-green-600 hover:underline flex items-center">➔ 德语动词变位大全</a></li>
+                        <li><a href="#" class="hover:text-green-600 hover:underline flex items-center">➔ 形容词词尾变化口诀</a></li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-purple-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">📻 听力与阅读</h3>
+                    <ul class="text-sm text-slate-600 space-y-3">
+                        <li><a href="#" class="hover:text-purple-600 hover:underline flex items-center">➔ 每日德语新闻 (Tagesschau)</a></li>
+                        <li><a href="#" class="hover:text-purple-600 hover:underline flex items-center">➔ 适合初学者的德语播客</a></li>
+                        <li><a href="#" class="hover:text-purple-600 hover:underline flex items-center">➔ 德语经典短篇小说阅读</a></li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-orange-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">🛠️ 实用工具</h3>
+                    <ul class="text-sm text-slate-600 space-y-3">
+                        <li><a href="#" class="hover:text-orange-600 hover:underline flex items-center">➔ 德语在线词典推荐</a></li>
+                        <li><a href="#" class="hover:text-orange-600 hover:underline flex items-center">➔ 德语键盘输入法安装指南</a></li>
+                        <li><a href="#" class="hover:text-orange-600 hover:underline flex items-center">➔ 德语发音在线测试</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：德语作文批改助手 (横版宽屏) -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 md:p-8">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2">✍️</span>
+                        <h2 class="text-2xl font-semibold text-slate-800">德语作文批改助手</h2>
+                        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full ml-3 font-medium">AI 驱动</span>
+                    </div>
+                    <p class="text-slate-500 text-sm mt-2">将你的德语作文发送给AI，获取语法纠错、词汇润色和写作建议。支持直接上传文档或图片。</p>
+                </div>
+            </div>
+            
+            <!-- 扣子 SDK 渲染容器 -->
+            <div id="coze-chat-container" class="w-full bg-slate-50 border border-slate-200 rounded-xl overflow-hidden chat-container-height relative shadow-inner">
+                <!-- 加载提示语 -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
+                    <svg class="animate-spin h-8 w-8 text-blue-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p>AI 助手加载中...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- 👇 扣子 (Coze) SDK 代码 👇 -->
+    <!-- ========================================== -->
+    
+    <!-- 1. 引入 Coze Web SDK 的 JS 文件 -->
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-web-client/chat-client/1.0.0/index.global.js"></script>
+    
+    <!-- 2. 初始化 Coze Bot -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 【已修复】正确填入了你的 Bot ID
+            const botId = '7618281037844004899'; 
+            
+            if (typeof CozeWebSDK !== 'undefined') {
+                new CozeWebSDK.WebChatClient({
+                    config: {
+                        bot_id: botId,
+                    },
+                    componentProps: {
+                        title: '德语作文批改助手',
+                        // 绑定到横版宽屏的容器中
+                        container: '#coze-chat-container', 
+                        layout: 'pc', 
+                    },
+                });
+            } else {
+                console.error('Coze SDK 加载失败');
+                // 【已修复】去掉了 getElementById 中的 # 号
+                document.getElementById('coze-chat-container').innerHTML = '<div class="flex items-center justify-center h-full text-red-500">AI 助手加载失败，请刷新页面重试。</div>';
+            }
+        });
+    </script>
+    <!-- ========================================== -->
+    <!-- 👆 扣子 (Coze) SDK 代码区域结束 👆 -->
+    <!-- ========================================== -->
+
+</body>
+</html>
