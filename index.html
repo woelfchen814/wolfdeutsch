@@ -153,7 +153,25 @@
                 document.getElementById('coze-chat-container').innerHTML = '<div class="flex items-center justify-center h-full text-red-500">AI 助手加载失败，请刷新页面重试。</div>';
             }
         });
-    </script>
+    
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7618281037844004899',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_********'
+      }
+    }
+  });
+</script>
     <!-- ========================================== -->
     <!-- 👆 扣子 (Coze) SDK 代码区域结束 👆 -->
     <!-- ========================================== -->
